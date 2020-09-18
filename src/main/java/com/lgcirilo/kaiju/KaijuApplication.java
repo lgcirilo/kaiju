@@ -1,3 +1,6 @@
+// TODO - create REST endpoints for tasks
+// TODO - create REST endpoints for user
+
 package com.lgcirilo.kaiju;
 
 import org.springframework.boot.SpringApplication;
