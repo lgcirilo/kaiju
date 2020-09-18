@@ -1,2 +1,2 @@
 # kaiju
-A kanban app
+A TODO list. Possibly kanban app in the future.
