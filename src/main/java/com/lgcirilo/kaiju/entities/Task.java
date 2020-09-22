@@ -16,6 +16,7 @@ public class Task {
     @NotNull
     private User user;
 
+    @NotNull
     private String text;
     private boolean isComplete;
     private LocalDateTime createdAt;

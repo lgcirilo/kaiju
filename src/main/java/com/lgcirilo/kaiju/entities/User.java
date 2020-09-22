@@ -72,6 +72,7 @@ public class User {
                 "id=" + id +
                 ", emailAddress='" + emailAddress + '\'' +
                 ", name='" + name + '\'' +
+                ", tasks=" + tasks +
                 '}';
     }
 }
