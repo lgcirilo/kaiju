@@ -59,8 +59,7 @@ public class TaskController {
 
     @DeleteMapping(path = "/delete/{taskId}")
     public void deleteTask(@PathVariable long taskId) {
-        Optional<Task> task = taskRepo.findById(taskId);
-        taskRepo.delete(task.get());
+            taskRepo.deleteById(taskId);
     }
 
     @PutMapping(path = "/update", consumes = "application/json")
