@@ -20,6 +20,9 @@ public class User {
     @OneToMany(mappedBy = "user")
     private Set<Task> tasks;
 
+//    @ManyToMany
+//    private Set<Authorities> authorities;
+
     public User() {
     }
 
