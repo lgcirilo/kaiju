@@ -16,7 +16,7 @@ public class Task {
     private long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JsonIgnore // used in conjunction with FetchType.Lazy so exception is not thrown
+    @JsonIgnore // used in conjunction with FetchType. Lazy so exception is not thrown
     @JoinColumn(name = "user_id")
     @NotNull
     private User user;

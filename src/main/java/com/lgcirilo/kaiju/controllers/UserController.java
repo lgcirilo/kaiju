@@ -37,8 +37,17 @@ public class UserController {
     }
 
     @DeleteMapping(path = "/delete/{userId}")
-    public void deleteUser(@PathVariable long userId) {
-        userRepo.deleteById(userId);
+    // changed to use responseentity. not yes tested. orignal code below
+//    public void deleteUser(@PathVariable long userId) {
+//        userRepo.deleteById(userId);
+//    }
+    public ResponseEntity<User> deleteUser(@PathVariable long userId) {
+        if (userRepo.findById(userId) != null) {
+            userRepo.deleteById(userId);
+            return new ResponseEntity<>(HttpStatus.ACCEPTED);
+        } else {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
     }
 
     // TODO - @PatchMapping. Allow only name correction
