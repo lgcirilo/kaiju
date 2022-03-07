@@ -9,6 +9,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/user", produces = "application/json")
 @CrossOrigin(origins = "*")
@@ -25,6 +27,11 @@ public class UserController {
     @GetMapping(path = "/{userId}")
     public User getUser(@PathVariable long userId) {
         return userRepo.findById(userId).get();
+    }
+
+    @GetMapping(path = "/getall")
+    public List<User> getUser() {
+        return userRepo.findAll();
     }
 
     @PostMapping(path = "/new", consumes = "application/json")
